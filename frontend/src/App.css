@@ -1,0 +1,71 @@
+.app {
+  background-color: #1a1a1a;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.status {
+  color: #4CAF50; /* Green for connected */
+}
+
+.status:where(:not(:connected)) {
+  color: #f44336; /* Red for other states (disconnected, error, unstable) */
+}
+
+.date-picker {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+th {
+  background: #333;
+  font-weight: bold;
+}
+
+tr:hover {
+  background: #2a2a2a;
+}
+
+.impact-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
